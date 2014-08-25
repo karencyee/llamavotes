@@ -1,1 +1,5 @@
-<%= @articles.inspect %>
+<% @articles.each do |a| %>
+  <%= a.title %>
+  <%= a.url %>
+  <%= a.user.username %>
+<% end %>
