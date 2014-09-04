@@ -1,3 +1,5 @@
+#put features that all other controllers would use in here
+
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

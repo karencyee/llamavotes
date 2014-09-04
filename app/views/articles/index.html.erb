@@ -1,5 +1,25 @@
-<% @articles.each do |a| %>
-  <%= a.title %>
-  <%= a.url %>
-  <%= a.user.username %>
-<% end %>
+<h1>Please submit your Articles and Comments here</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>WELCOME</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+ <tbody>
+    <% @articles.each do |a| %>
+      <tr>
+        <td><%= a.title %></td>
+        <td><%= a.url %></td>
+        <td><%= a.user.username %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
