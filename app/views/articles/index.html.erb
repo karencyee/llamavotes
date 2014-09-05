@@ -16,15 +16,13 @@
   <div id="content">
     
       <div id="header">
-          <h1><a href="#">Great Articles for Work</a></h1>            
+          <h1><a href="#">Welcome!</a></h1>            
         </div><!-- header -->
         
         <div id="menu">
           <ul>  
-              <li class="selected"><a href="#">What to Post</a> /</li>
-                <li><a href="#">Dev Articles</a> /</li>
-                <li><a href="#">E-Commerce Articles</a> /</li>
-                <li><a href="#">Contact</a></li>
+              <li class="selected"><a href="#">Popular Articles</a> /</li>
+                <li><a href="#">Users</a></li>
             </ul>
         </div><!--menu-->
         
@@ -32,16 +30,24 @@
        
         <div id="sidebar">
         
-          <h4>/Featured Articles</h4>
+          <h4>Submit your Articles Here</h4>
           
             
             <img src="images/majica.png" alt="tshirt" border="0" class="ttshirt"/>
-            <h3><a href="#">Nulla dapibus urna</a></h3>
-            <p>Morbi dignissim. Etiam sed 
-                enim in tellus aliquet sollicitudin. 
-                molestie. Class aptent taciti 
-                sociosqu ad litora torquent per 
-                conubia nostra, per inceptos.</p>               
+            <h3><a href="#">Title:</a></h3>
+            <p>
+
+ <tbody>
+    <% @articles.each do |a| %>
+      <tr>
+        <td><%= link_to a.title, a %></td>
+        <td><%= a.url %></td>
+        <td><%= a.user.username %></td>
+      </tr>
+    <% end %>
+  </tbody>
+
+            </p>               
             
             <h3><a href="#" class="str">View Articles</a></h3>
       
